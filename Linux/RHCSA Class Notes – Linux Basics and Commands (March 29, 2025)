@@ -1,0 +1,214 @@
+🧠 Key Principle:
+“Know who you are, where you are, and what you want to do.”
+
+👤 WHO YOU ARE
+✅ whoami
+Purpose: Shows the current logged-in username.
+
+
+Use: Confirm which user you’re operating as.
+
+
+✅ id
+Purpose: Shows your UID, GID, and group memberships.
+
+
+Use: See user and group ownership for permissions.
+
+
+✅ who
+Purpose: Lists all users currently logged into the system.
+
+
+Use: Check who else is on the machine.
+
+
+✅ w
+Purpose: Shows logged-in users and what they are doing.
+
+
+Includes: Idle time, login time, terminal, and running command.
+
+
+
+📍 WHERE YOU ARE
+✅ pwd
+Purpose: Prints the current working directory.
+
+
+Use: Helps you know where you are in the file system.
+
+
+✅ cd /
+Purpose: Takes you to the root directory.
+
+
+Use: If you’re lost in the file system, this command resets your location to the top.
+
+
+
+📁 WHAT YOU WANT TO DO
+✅ ls -l
+Purpose: Long listing of files and directories (permissions, owners, size, time).
+
+
+✅ ls -la
+Purpose: Same as ls -l, but also shows hidden files (those starting with .).
+
+
+✅ touch filename
+Purpose: Creates an empty file.
+
+
+✅ mkdir dirname
+Purpose: Creates a new directory.
+
+
+
+🧠 LINUX HISTORY & ARCHITECTURE
+Linux was created by Linus Torvalds in 1991 as a free, open-source OS kernel.
+
+
+It works with hardware and provides a platform for applications and commands.
+
+
+
+🐧 The Shell
+✅ env
+Purpose: Shows environment variables (like PATH, HOME, SHELL).
+
+
+Use: Understand how your session and commands are configured.
+
+
+✅ /sbin/nologin
+A shell that denies login access. Used to restrict users or service accounts.
+
+
+✅ usermod -s /sbin/nologin username
+Purpose: Set the shell of a user to /sbin/nologin.
+
+
+Use: Disable login for a user without deleting them.
+
+
+
+📀 MEMORY MANAGEMENT
+✅ free -m
+Purpose: Shows memory (RAM) usage in megabytes.
+
+
+✅ free -g
+Purpose: Shows memory usage in gigabytes.
+
+
+✅ free -h
+Purpose: Memory in a human-readable format (auto chooses MB/GB).
+
+
+✅ What is Swap?
+Swap is disk space used as "extra memory" when RAM is full.
+
+
+It’s slower than RAM but helps prevent system crashes.
+
+
+
+📍 DISK SPACE CHECKING
+✅ df -h
+Purpose: Shows disk usage of mounted filesystems in human-readable format.
+
+
+✅ df -ht ext4
+Purpose: Shows only ext4 filesystems in a human-readable format.
+
+
+
+👤 USER LOOKUP
+✅ cat /etc/passwd | grep siya
+Purpose: Searches the list of system users for any entry with siya.
+
+
+Use: Check if a user exists and see their login shell, home directory, UID/GID.
+
+
+
+💻 First Time Using MobaXterm – SSH Access & User Management
+✅ What is MobaXterm?
+A Windows-based tool for terminal, SSH, and remote Linux access.
+
+
+Used to connect to the remote system at IP 10.12.80.52.
+
+
+✅ SSH Login:
+ssh smith@10.12.80.52
+
+Connected as user smith.
+
+
+Host added to known hosts.
+
+
+✅ Switched to Root:
+su - root
+
+✅ Created New User siya:
+useradd siya
+passwd *****
+
+Set a short password (warning given, but accepted).
+
+
+✅ Created Files:
+touch class1 class2 class3 class4
+
+Created 4 empty files.
+
+
+✅ Verified Files:
+ls
+ll
+
+Confirmed files were created with user siya as the owner.
+
+
+❌ Connection Lost:
+Read from remote host 10.12.80.52: Connection reset by peer
+
+SSH session was disconnected.
+
+
+❌ Tried Reconnecting:
+ssh smith@10.12.80.52
+
+Error: Connection timed out (server likely down or unreachable).
+
+
+
+✅ Summary Recap:
+Know who you are (whoami, id)
+
+
+Know where you are (pwd, cd)
+
+
+Know what you're doing (ls, touch, env)
+
+
+Monitor system resources (free, df, w)
+
+
+Manage users and shell access (usermod -s /sbin/nologin, cat /etc/passwd)
+
+
+First-time use of MobaXterm for SSH into a remote Linux machine
+
+
+User creation and file management using the terminal
+
+
+Encountered SSH timeout and connection reset errors
+
+
+
